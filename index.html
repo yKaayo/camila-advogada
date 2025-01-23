@@ -17,7 +17,7 @@
     <!-- Bootstrap Icon -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
     />
 
     <!-- CSS -->
@@ -213,8 +213,9 @@
 
         <img
           src="./src/assets/img/still-life-with-scales-justice-b.webp"
-          class="mask-gradient min-h-[200px] h-full max-h-[600px] object-cover -rotate-12 relative -top-20 md:left-0 z-[3]"
+          class="mask-gradient min-h-[200px] h-full max-h-[600px] object-contain -rotate-12 relative -top-20 md:left-0 z-[3]"
           alt="Simbolo que mostra justiça"
+          loading="priority"
         />
       </figure>
     </main>
@@ -415,7 +416,7 @@
 
       <!-- Right -->
       <div
-        class="flex justify-center items-center min-h-[50vh] h-full relative"
+        class="flex overflow-x-visible justify-center items-center min-h-[50vh] h-full relative"
       >
         <div class="circle--red"></div>
 
@@ -470,7 +471,7 @@
 
         <img
           src="./src/assets/img/law.webp"
-          class="min-h-[200px] h-[calc(100%-100px)] top-0 relative z-[2] object-cover overflow-visible"
+          class="h-full top-0 relative z-[2] object-contain"
           alt="Símbolo de justiça"
           loading="lazy"
         />
