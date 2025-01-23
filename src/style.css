@@ -27,7 +27,7 @@
 }
 
 /* Components */
-.btn--dark {
+.btn {
   @apply flex items-center px-3 py-3 md:px-4 lg:px-6 bg-dark-red relative hover:scale-[1.06] text-white text-sm tracking-wider hover:text-black hover:bg-transparent duration-300 border-dark-red border-2 font-bold dark:border-yellow dark:bg-yellow dark:text-black dark:hover:bg-transparent dark:hover:text-white;
 }
 /* Components - End */
