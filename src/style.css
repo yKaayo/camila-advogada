@@ -1,0 +1,153 @@
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts */
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Components */
+.btn--dark {
+  @apply flex items-center px-3 py-3 md:px-4 lg:px-6 bg-dark-red relative hover:scale-[1.06] text-white text-sm tracking-wider hover:text-black hover:bg-transparent duration-300 border-dark-red border-2 font-bold dark:border-yellow dark:bg-yellow dark:text-black dark:hover:bg-transparent dark:hover:text-white;
+}
+/* Components - End */
+
+/* Scroll Animation */
+.top-to-bottom {
+  @apply opacity-0 scale-75 top-[200px] md:top-0 relative;
+}
+
+.right-to-left {
+  @apply md:left-[200px];
+}
+
+.left-to-right {
+  @apply md:right-[200px];
+}
+/* Scroll Animation - End */
+
+/* Header */
+.header {
+  opacity: 0;
+  animation: revealHeader 1.2s linear forwards;
+}
+
+@keyframes revealHeader {
+  from {
+    opacity: 0;
+    top: -80px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.header:nth-child(1) {
+  animation-delay: 1.4s;
+}
+
+.nav__menu {
+  @apply flex flex-col p-4 gap-3 text-black font-medium md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:flex-row md:mb-0 md:p-0 md:gap-0 dark:border-light-gray bg-white dark:bg-black md:bg-transparent dark:md:bg-transparent;
+}
+
+.nav__link {
+  @apply block py-2 px-3 rounded hover:bg-dark-red hover:text-white md:hover:bg-transparent md:border-0 md:hover:text-dark-red md:p-0 dark:text-white md:dark:hover:bg-transparent duration-500 dark:hover:text-yellow;
+}
+/* Header - End */
+
+/* Hero */
+.circle--red {
+  @apply bg-gradient-to-b from-dark-red via-orange-600 to-yellow opacity-90 rounded-full blur-xl h-52 w-72  absolute;
+}
+
+.hero__text {
+  opacity: 0;
+  animation: revealBlur 1s ease-in-out forwards;
+}
+
+@keyframes revealBlur {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+  }
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.hero__text:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.hero__text:nth-child(3) {
+  animation-delay: 1.2s;
+}
+
+.paragraph {
+  @apply text-light-gray dark:text-gray-300 text-balance md:text-start;
+}
+
+.mask-gradient {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 75%,
+    transparent 95%
+  );
+  mask-image: linear-gradient(to bottom, black 0%, black 75%, transparent 95%);
+}
+/* Hero - End */
+
+/* Sobre mim */
+.section {
+  @apply min-h-[calc(100vh-80px)] container mx-auto px-5 md:px-10;
+}
+
+.section__title {
+  @apply text-3xl text-center font-bold mb-5 text-balance text-black dark:text-white;
+}
+
+.section__subtitle {
+  @apply flex items-center text-xl text-center md:text-start text-balance font-semibold text-black dark:text-white;
+}
+/* Sobre mim - End */
+
+/* Footer */
+.footer {
+  @apply container mx-auto grid grid-cols-1 sm:grid-cols-[repeat(2,fit-content(250px))] md:grid-cols-[repeat(4,fit-content(250px))] gap-10 px-5 pt-10 pb-20 justify-center sm:justify-between;
+}
+
+.footer__title {
+  @apply flex items-center text-3xl font-bold text-dark-red dark:text-yellow;
+}
+
+.footer__paragraph {
+  @apply text-sm paragraph;
+}
+
+.footer__link {
+  @apply footer__paragraph hover:text-dark-red dark:hover:text-yellow duration-500;
+}
+/* Footer - End */

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth dark overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advocacia em Pauta</title>
+
+    <!-- Website Icon -->
+    <link
+      rel="shortcut icon"
+      href="./src/assets/img/logo.webp"
+      type="image/x-icon"
+    />
+
+    <!-- Bootstrap Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body class="bg-white dark:bg-black overflow-x-hidden">
+    <!-- Header -->
+    <header class="header fixed top-0 w-dvw z-10">
+      <div
+        class="h-20 absolute w-dvw bg-gradient-to-b from-white dark:from-black to-transparent"
+      ></div>
+      <nav
+        class="container mx-auto block md:flex justify-between items-center p-4 z-[1] h-20 w-full relative"
+      >
+        <div class="flex justify-between items-center w-full md:w-fit">
+          <a
+            href="#"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+            aria-label="Return to top of the page"
+          >
+            <span
+              class="flex items-center text-2xl font-semibold dark:text-white w-[180px] lg:w-auto"
+              ><img
+                src="./src/assets/img/logo.webp"
+                class="h-8 me-2 text-black dark:text-white brightness-0 dark:brightness-100"
+                alt="Website Logo"
+              />Advocacia em Pauta</span
+            >
+          </a>
+          <button
+            id="menuButton"
+            data-collapse-toggle="navbar-default"
+            class="flex justify-center items-center size-12 rounded-lg text-black dark:text-white focus:ring-1 focus:ring-black duration-300 dark:focus:ring-white md:hidden"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+            aria-label="Main menu"
+          >
+            <i class="bi bi-justify-right text-2xl"></i>
+            <span class="sr-only">Open menu</span>
+          </button>
+        </div>
+
+        <div
+          class="hidden w-full md:flex md:items-center justify-between md:w-[70%] lg:w-[58%] md:gap-5 border border-gray-100 md:border-none mt-5 md:mt-0"
+          id="navbar-default"
+        >
+          <ul class="nav__menu">
+            <li>
+              <a
+                href="#home"
+                class="nav__link"
+                aria-current="page"
+                aria-label="Ir a página inicial"
+                >Início</a
+              >
+            </li>
+            <li>
+              <a
+                href="#sobreMim"
+                class="nav__link"
+                aria-label="Ir para a seção sobre mim"
+                >Sobre mim</a
+              >
+            </li>
+            <li>
+              <a
+                href="#vantagens"
+                class="nav__link"
+                aria-label="Ir para a seção de vantagens"
+                >Vantagens</a
+              >
+            </li>
+          </ul>
+          <div
+            class="flex items-center px-5 md:px-0 py-5 gap-5 h-20 bg-white dark:bg-black md:bg-transparent dark:md:bg-transparent"
+          >
+            <button
+              id="themeBtn"
+              class="flex justify-center items-center size-11 rounded-lg text-black dark:text-white ring-2 ring-black hover:text-white duration-300 hover:bg-black dark:hover:bg-white dark:ring-white dark:hover:text-black"
+              role="switch"
+              aria-checked="true"
+              aria-label="Switch to dark"
+            >
+              <i class="bi bi-moon text-xl"></i>
+            </button>
+            <a
+              class="btn--dark gap-1"
+              tabindex="0"
+              href="https://wa.me/5511996865180"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-whatsapp text-green text-lg"></i>CONTATO
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <main
+      id="home"
+      class="min-h-screen grid-cols-1 md:grid-cols-[55%,45%] pt-32 md:pt-20 pb-5 md:pb-0 grid place-items-center container mx-auto px-5 md:px-10 gap-10"
+    >
+      <!-- Left -->
+      <div
+        class="circle--red right-1 md:right-[60%] top-[4%] md:top-[20%] z-[1]"
+      ></div>
+      <div
+        class="flex flex-col md:items-start items-center gap-5 relative z-[2]"
+      >
+        <h1
+          class="hero__text font-bold text-5xl text-balance leading-snug md:text-start text-center dark:text-white"
+        >
+          Defendendo seus
+          <span class="text-dark-red dark:text-yellow">Direitos</span> com
+          <span class="text-dark-red dark:text-yellow">Excelência</span> e
+          <span class="text-dark-red dark:text-yellow">Dedicação</span>
+        </h1>
+        <p
+          class="hero__text text-balance text-center md:text-start text-light-gray dark:text-gray-300"
+        >
+          Advocacia especializada e capacitada para oferecer as melhores
+          soluções jurídicas para você
+        </p>
+        <div class="hero__text flex items-center gap-3 md:gap-5 mt-3">
+          <a
+            tabindex="0"
+            href="https://wa.me/5511996865180"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn--dark"
+            >AGENDE UMA CONSULTA<i
+              class="bi bi-arrow-right ms-2 text-md"
+              aria-label="Agendar em contato pelo Whatsapp"
+            ></i
+          ></a>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <figure class="flex justify-center items-center w-full relative">
+        <div class="circle--red top-1/2 left-2 z-[1]"></div>
+
+        <svg
+          width="300"
+          height="480"
+          viewBox="0 0 300 480"
+          class="absolute -top-10 -rotate-[38deg]"
+        >
+          <ellipse
+            cx="150"
+            cy="240"
+            rx="150"
+            ry="240"
+            stroke-width="1"
+            fill="none"
+            class="stroke-black dark:stroke-white"
+          />
+        </svg>
+        <svg
+          width="300"
+          height="480"
+          viewBox="0 0 300 480"
+          class="absolute top-0 md:top-0 -rotate-[38deg]"
+        >
+          <ellipse
+            cx="150"
+            cy="240"
+            rx="150"
+            ry="240"
+            stroke-width="1"
+            fill="none"
+            class="stroke-black dark:stroke-white"
+          />
+        </svg>
+        <svg
+          width="300"
+          height="480"
+          viewBox="0 0 300 480"
+          class="absolute top-10 -rotate-[38deg]"
+        >
+          <ellipse
+            cx="150"
+            cy="240"
+            rx="150"
+            ry="240"
+            stroke-width="1"
+            fill="none"
+            class="stroke-black dark:stroke-white"
+          />
+        </svg>
+
+        <img
+          src="./src/assets/img/still-life-with-scales-justice-b.webp"
+          class="mask-gradient min-h-[200px] h-full max-h-[600px] object-cover -rotate-12 relative -top-20 md:left-0 z-[3]"
+          alt="Justice"
+        />
+      </figure>
+    </main>
+
+    <!-- Sobre mim -->
+    <section
+      id="sobreMim"
+      class="section grid justify-between grid-cols-1 md:grid-cols-[45%,55%] pt-20 pb-5 gap-10"
+    >
+      <!-- Bottom - Left -->
+      <div
+        class="flex justify-center items-center h-full relative order-2 md:order-1"
+      >
+        <div class="circle--red"></div>
+
+        <svg
+          width="300"
+          height="480"
+          viewBox="0 0 300 480"
+          class="absolute -top-10 h-full -rotate-[38deg] z-[1]"
+        >
+          <ellipse
+            cx="150"
+            cy="240"
+            rx="150"
+            ry="240"
+            stroke-width="1"
+            fill="none"
+            class="stroke-black dark:stroke-white"
+          />
+        </svg>
+        <svg
+          width="300"
+          height="480"
+          viewBox="0 0 300 480"
+          class="absolute h-full -rotate-[38deg] z-[1]"
+        >
+          <ellipse
+            cx="150"
+            cy="240"
+            rx="150"
+            ry="240"
+            stroke-width="1"
+            fill="none"
+            class="stroke-black dark:stroke-white"
+          />
+        </svg>
+        <svg
+          width="300"
+          height="480"
+          viewBox="0 0 300 480"
+          class="absolute h-full top-10 -rotate-[38deg] z-[1]"
+        >
+          <ellipse
+            cx="150"
+            cy="240"
+            rx="150"
+            ry="240"
+            stroke-width="1"
+            fill="none"
+            class="stroke-black dark:stroke-white"
+          />
+        </svg>
+
+        <img
+          src="./src/assets/img/lawer.webp"
+          class="min-h-[200px] h-full max-h-[600px] relative z-[2] mask-gradient object-cover"
+          alt="Lawer"
+          loading="lazy"
+        />
+      </div>
+
+      <!-- Top - Right -->
+      <div
+        class="flex items-center justify-center order-1 md:ms-5 xl:ms-32 2xl:ms-56 md:order-2 relative"
+      >
+        <div class="circle--red -right-48 md:-right-10 top-[5%]"></div>
+        <div
+          class="top-to-bottom right-to-left flex flex-col items-center md:items-start justify-center z-[1] gap-2"
+        >
+          <div class="flex flex-col">
+            <h2 class="text-dark-red dark:text-yellow text-lg font-semibold">
+              Sobre mim
+            </h2>
+            <h3 class="section__title">Camilla Araujo</h3>
+          </div>
+
+          <div class="flex flex-col gap-5 items-end">
+            <article
+              class="flex flex-col items-center md:items-start justify-center"
+            >
+              <h4 class="section__subtitle">
+                <i
+                  class="bi bi-person text-dark-red dark:text-yellow me-2"
+                ></i
+                >Quem sou eu?
+              </h4>
+              <p class="paragraph text-center">
+                Olá, me chamo Camilla Araujo, sou advogada especializada pela
+                OAB/SP.
+              </p>
+            </article>
+
+            <article
+              class="flex flex-col items-center md:items-start justify-center"
+            >
+              <h4 class="section__subtitle">
+                <i class="bi bi-tag text-dark-red dark:text-yellow me-2"></i
+                >Missão
+              </h4>
+              <p class="paragraph text-center">
+                Minha missão é simplificar o mundo jurídico para você,
+                garantindo uma experiência ética, transparente e eficiente.
+              </p>
+            </article>
+
+            <article
+              class="flex flex-col items-center md:items-start justify-center"
+            >
+              <h4 class="section__subtitle">
+                <i
+                  class="bi bi-trophy text-dark-red dark:text-yellow me-2"
+                ></i
+                >Experiência
+              </h4>
+              <p class="paragraph text-center">
+                Já ajudei diversos clientes a encontrar soluções para seus
+                desafios legais, sempre priorizando seus direitos e interesses.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto w-fit">
+      <div class="dark:bg-white bg-black sm:rounded-full">
+        <h3
+          class="text-3xl text-white dark:text-black text-balance font-bold text-center px-5 sm:px-10 md:px-12 py-3"
+        >
+          Não espere que os problemas aconteçam.<br>
+          <a
+            class="dark:hover:text-yellow hover:text-dark-red duration-300 underline"
+            tabindex="0"
+            href="https://wa.me/5511996865180"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Agende uma consulta agora mesmo</a
+          >!
+        </h3>
+      </div>
+    </section>
+
+    <!-- Vantagens -->
+    <section
+      id="vantagens"
+      class="section py-5 grid md:justify-between grid-cols-1 md:grid-cols-[55%,45%] gap-10"
+    >
+      <!-- Left -->
+      <div
+        class="top-to-bottom left-to-right flex flex-col items-center justify-center md:items-start z-[1] gap-2"
+      >
+        <div class="flex flex-col">
+          <h2 class="text-dark-red dark:text-yellow text-lg font-semibold">
+            VANTAGENS
+          </h2>
+          <h3 class="w-[380px] md:w-auto section__title md:text-start">
+            Por que escolher a Advocacia em Pauta?
+          </h3>
+        </div>
+
+        <div class="flex flex-col gap-5 items-center md:items-start">
+          <article
+            class="flex flex-col items-center md:items-start justify-center gap-1"
+          >
+            <h4 class="section__subtitle">
+              <i
+                class="bi bi-mortarboard text-dark-red dark:text-yellow me-2"
+              ></i>
+              Conhecimento aprofundado
+            </h4>
+            <p class="paragraph text-center">
+              Dominamos as leis e jurisprudência para garantir a melhor defesa.
+            </p>
+          </article>
+
+          <article
+            class="flex flex-col items-center md:items-start justify-center gap-1"
+          >
+            <h4 class="section__subtitle">
+              <i
+                class="bi bi-telephone text-dark-red dark:text-yellow me-2"
+              ></i>
+              Atendimento personalizado
+            </h4>
+            <p class="paragraph text-center">
+              Sua causa é única e recebe a atenção que merece.
+            </p>
+          </article>
+
+          <article
+            class="flex flex-col items-center md:items-start justify-center gap-1"
+          >
+            <h4 class="section__subtitle">
+              <i
+                class="bi bi-arrow-left-right text-dark-red dark:text-yellow me-2"
+              ></i>
+              Orientação detalhada
+            </h4>
+            <p class="paragraph text-center">
+              Entenda seus direitos e deveres de forma clara e objetiva.
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div
+        class="flex justify-center items-center min-h-[50vh] h-full relative"
+      >
+        <div class="circle--red"></div>
+
+        <svg
+          width="300"
+          height="480"
+          viewBox="0 0 300 480"
+          class="absolute -top-10 h-full -rotate-[38deg] z-[1]"
+        >
+          <ellipse
+            cx="150"
+            cy="240"
+            rx="150"
+            ry="240"
+            stroke-width="1"
+            fill="none"
+            class="stroke-black dark:stroke-white"
+          />
+        </svg>
+        <svg
+          width="300"
+          height="480"
+          viewBox="0 0 300 480"
+          class="absolute h-full -rotate-[38deg] z-[1]"
+        >
+          <ellipse
+            cx="150"
+            cy="240"
+            rx="150"
+            ry="240"
+            stroke-width="1"
+            fill="none"
+            class="stroke-black dark:stroke-white"
+          />
+        </svg>
+        <svg
+          width="300"
+          height="480"
+          viewBox="0 0 300 480"
+          class="absolute h-full top-10 -rotate-[38deg] z-[1]"
+        >
+          <ellipse
+            cx="150"
+            cy="240"
+            rx="150"
+            ry="240"
+            stroke-width="1"
+            fill="none"
+            class="stroke-black dark:stroke-white"
+          />
+        </svg>
+
+        <img
+          src="./src/assets/img/law.webp"
+          class="min-h-[200px] h-[calc(100%-100px)] top-0 relative z-[2] object-cover overflow-visible"
+          alt=""
+          loading="lazy"
+        />
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div
+        class="flex flex-col items-center text-center sm:text-start sm:items-start gap-3"
+      >
+        <h3 class="footer__title">
+          <img
+            src="./src/assets/img/logo.webp"
+            class="h-12 me-2 brightness-0 dark:brightness-100"
+            alt="Website Logo"
+            loading="lazy"
+          />ADVOCACIA EM PAUTA
+        </h3>
+        <div class="flex flex-col gap-2">
+          <p class="footer__paragraph">
+            <i
+              class="bi bi-envelope text-dark-red dark:text-yellow font-semibold me-2"
+            ></i
+            >email@email.com
+          </p>
+          <p class="footer__paragraph">
+            <i
+              class="bi bi-telephone text-dark-red dark:text-yellow font-semibold me-2"
+            ></i
+            >(12) 99345-6789
+          </p>
+        </div>
+      </div>
+
+      <nav
+        class="flex flex-col items-center text-center sm:text-start sm:items-start gap-3"
+      >
+        <h3 class="footer__title">Links</h3>
+        <ul class="flex flex-col gap-2">
+          <li>
+            <a
+              href="#home"
+              class="footer__link"
+              aria-label="Ir para página inicial"
+              >Início</a
+            >
+          </li>
+          <li>
+            <a
+              href="#aboutus"
+              class="footer__link"
+              aria-label="Ir para página sobre mim"
+              >Sobre mim</a
+            >
+          </li>
+          <li>
+            <a
+              href="#vantagens"
+              class="footer__link"
+              aria-label="Ir para página de vantagens"
+              >Vantagens</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div
+        class="flex flex-col items-center text-center sm:text-start sm:items-start gap-3"
+      >
+        <h3 class="footer__title">Legal</h3>
+        <ul class="flex flex-col gap-2">
+          <li><p class="footer__paragraph">Termos de uso</p></li>
+          <li><p class="footer__paragraph">Política de Privacidade</p></li>
+          <li><p class="footer__paragraph">Cookies</p></li>
+        </ul>
+      </div>
+
+      <div
+        class="flex flex-col items-center text-center sm:text-start sm:items-start gap-3"
+      >
+        <h3 class="footer__title">Redes Sociais</h3>
+        <ul class="flex flex-col gap-2">
+          <li>
+            <a
+              class="footer__link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/advocacia_em_pauta22/"
+              ><i class="bi bi-instagram me-1"></i>Instagram</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Flowbite -->
+    <script
+      src="./node_modules/flowbite/dist/flowbite.min.js"
+      type="module"
+    ></script>
+
+    <!-- GSAP -->
+    <script
+      src="./node_modules/gsap/dist/ScrollTrigger.min.js"
+      type="module"
+    ></script>
+
+    <!-- JS -->
+    <script src="./src/main.js" type="module"></script>
+  </body>
+</html>
